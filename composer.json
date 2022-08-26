@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel-docschema",
+    "name": "pdocs/laravel-docschema",
     "description": "Laravel simple web doc schema",
     "license": "MIT",
     "authors": [
