@@ -117,7 +117,7 @@
                 </div>
                 <!-- APP_DEBUG_HIDDEN -->
                 <div class="form-group {{ $errors->has('app_debug') ? ' has-error ' : '' }}">
-                    <input type="hidden" name="app_debug" id="app_debug_true" value="true"/>
+                    <input type="hidden" name="app_debug" id="app_debug_true" value="false"/>
                     @if ($errors->has('app_debug'))
                         <span class="error-block">
                             <i class="fa fa-fw fa-exclamation-triangle" aria-hidden="true"></i>
