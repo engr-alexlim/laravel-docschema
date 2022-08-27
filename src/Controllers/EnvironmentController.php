@@ -117,7 +117,6 @@ class EnvironmentController extends Controller
             DB::unprepared(file_get_contents($path));
             $this->EnvironmentManager->saveFileWizard($request);
             event(new EnvironmentSaved($request));
-            event(new LaravelInstallerFinished);
             return $redirect->route('LaravelInstaller::final');
         }catch (\Exception $e) { 
             return $redirect->route('LaravelInstaller::environmentWizard')->withInput()->withErrors([
