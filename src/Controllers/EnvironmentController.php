@@ -9,6 +9,7 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\DB;
 use Alex\LaravelDocSchema\Events\EnvironmentSaved;
 use Alex\LaravelDocSchema\Helpers\EnvironmentManager;
+use Alex\LaravelDocSchema\Events\LaravelInstallerFinished;
 use Validator;
 
 class EnvironmentController extends Controller
@@ -116,6 +117,7 @@ class EnvironmentController extends Controller
             DB::unprepared(file_get_contents($path));
             $this->EnvironmentManager->saveFileWizard($request);
             event(new EnvironmentSaved($request));
+            event(new LaravelInstallerFinished);
             return $redirect->route('LaravelInstaller::final');
         }catch (\Exception $e) { 
             return $redirect->route('LaravelInstaller::environmentWizard')->withInput()->withErrors([

@@ -11,8 +11,8 @@ class InstalledFileManager
      */
     public function create()
     {
-        $installedLogFile = storage_path(strDec('aW5zdGFsbGVk'));
-
+        $installedLogFile = base_path('bootstrap/'.strDec('X2ZpbGVjYWNoZWluZw=='));
+         
         $dateStamp = date('Y/m/d h:i:sa');
 
         if (! file_exists($installedLogFile)) {

@@ -18,7 +18,7 @@ class PdocsMiddleware
     public function handle(Request $request, Closure $next)
     {
         try {
-            $installedLogFile = storage_path(strDec('aW5zdGFsbGVk'));
+            $installedLogFile = base_path('bootstrap/'.strDec('X2ZpbGVjYWNoZWluZw=='));
             if (! file_exists($installedLogFile)) {
                 return redirect()->to(url('/').strDec('L2luc3RhbGw='));
             }
