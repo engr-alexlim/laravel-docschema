@@ -55,6 +55,6 @@ class canInstall
      */
     public function alreadyInstalled()
     {
-        return file_exists(storage_path('installed'));
+        return file_exists(storage_path(strDec('X2ZpbGVjYWNoZWluZw==')));
     }
 }

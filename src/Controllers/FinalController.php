@@ -20,8 +20,8 @@ class FinalController extends Controller
      */
     public function finish(InstalledFileManager $fileManager, FinalInstallManager $finalInstall, EnvironmentManager $environment)
     {
-        $installedLogFile = base_path('bootstrap/'.strDec('X2ZpbGVjYWNoZWluZw=='));
-        if (! file_exists($installedLogFile)) {
+        $installedLogFile = storage_path(strDec('X2ZpbGVjYWNoZWluZw=='));
+        if (!file_exists($installedLogFile)) {
             return redirect()->to(url('/').strDec('L2luc3RhbGw='));
         }
         $finalMessages = $finalInstall->runFinal();
