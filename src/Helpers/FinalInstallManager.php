@@ -32,7 +32,7 @@ class FinalInstallManager
     private static function generateKey(BufferedOutput $outputLog)
     {
         try {
-            if (config('installer.final.key')) {
+            if (config('requirements.final.key')) {
                 Artisan::call('key:generate', ['--force'=> true], $outputLog);
             }
         } catch (Exception $e) {
@@ -51,7 +51,7 @@ class FinalInstallManager
     private static function publishVendorAssets(BufferedOutput $outputLog)
     {
         try {
-            if (config('installer.final.publish')) {
+            if (config('requirements.final.publish')) {
                 Artisan::call('vendor:publish', ['--all' => true], $outputLog);
             }
         } catch (Exception $e) {
