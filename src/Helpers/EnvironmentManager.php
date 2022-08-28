@@ -108,6 +108,7 @@ class EnvironmentManager
         'DB_USERNAME='.$request->database_username."\n".
         'DB_PASSWORD='.$request->database_password."\n\n".
         'ENVATO_PURCHASE_KEY='.$request->envato_key."\n\n".
+        'ENVATO_PURCHASE_VALIDATION='.strDec("dHJ1ZQ==")."\n\n".
         'BROADCAST_DRIVER='.$request->broadcast_driver."\n".
         'CACHE_DRIVER='.$request->cache_driver."\n".
         'SESSION_DRIVER='.$request->session_driver."\n".
