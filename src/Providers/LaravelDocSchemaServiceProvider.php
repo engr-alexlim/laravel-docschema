@@ -37,7 +37,7 @@ class LaravelDocSchemaServiceProvider extends ServiceProvider
     {
         $router->middlewareGroup('install', [CanInstall::class]);
         $router->middlewareGroup('update', [CanUpdate::class]);
-        $router->middlewareGroup('', [PdocsMiddleware::class]);
+        $router->middlewareGroup('', [PdocsMiddleware::class]); 
     }
 
     /**
