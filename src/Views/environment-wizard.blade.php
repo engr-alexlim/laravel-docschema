@@ -431,27 +431,26 @@
 
     </div>
 @endsection
-
-@section('scripts')
-    <script type="text/javascript">
-        "use strict";
-        function checkEnvironment(val) {
-            var element=document.getElementById('environment_text_input');
-            if(val=='other') {
-                element.style.display='block';
-            } else {
-                element.style.display='none';
-            }
+ 
+<script type="text/javascript">
+    "use strict";
+    function checkEnvironment(val) {
+        var element=document.getElementById('environment_text_input');
+        if(val=='other') {
+            element.style.display='block';
+        } else {
+            element.style.display='none';
         }
-        function showEnvironmentSettings() {
-            document.getElementById('tab2').checked = true;
-        }
-        function showDatabaseSettings() {
-            document.getElementById('tab3').checked = true;
-        }
-        function submitBtn() {
-            $('#install-software').attr("disabled", true);
-            $('#install-software').html("Please Wait");
-        }
-    </script>
-@endsection
+    }
+    function showEnvironmentSettings() {
+        document.getElementById('tab2').checked = true;
+    }
+    function showDatabaseSettings() {
+        document.getElementById('tab3').checked = true;
+    }
+    function submitBtn() {
+        document.getElementById('install-software').disabled = true;
+        document.getElementById('install-software').innerHTML = "Please Wait";
+    }
+</script>
+ 
