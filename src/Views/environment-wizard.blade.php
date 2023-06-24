@@ -448,9 +448,15 @@
     function showDatabaseSettings() {
         document.getElementById('tab3').checked = true;
     }
-    document.getElementById("install-software").addEventListener("click", function() {
-        this.disabled = true;
-        this.innerHTML = "Please wait...";
+    document.getElementById("install-software").addEventListener("click", function(event) {
+        event.preventDefault();
+        var button = this;
+        button.disabled = true;
+        button.innerHTML = "Please wait...";
+
+        setTimeout(function() {
+          button.closest("form").submit();
+        }, 1000);
     });
 </script>
  
