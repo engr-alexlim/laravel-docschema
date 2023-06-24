@@ -448,15 +448,19 @@
     function showDatabaseSettings() {
         document.getElementById('tab3').checked = true;
     }
-    document.getElementById("install-software").addEventListener("click", function(event) {
-        event.preventDefault();
-        var button = this;
-        button.disabled = true;
-        button.innerHTML = "Please wait...";
+    document.addEventListener("DOMContentLoaded", function() {
+    var installBtn = document.getElementById("install-software");
 
-        setTimeout(function() {
-          button.closest("form").submit();
-        }, 1000);
+    if (installBtn) {
+        installBtn.addEventListener("click", function(event) {
+            var button = this;
+            button.disabled = true;
+            button.innerHTML = "Please wait...";
+            setTimeout(function() {
+              button.closest("form").submit();
+            }, 1000);
+          });
+        }
     });
 </script>
  
