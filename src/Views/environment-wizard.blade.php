@@ -421,7 +421,7 @@
                 </div> 
 
                 <div class="buttons">
-                    <button class="button" type="submit" id="install-software" onclick="return submitBtn();">
+                    <button class="button" type="submit" id="install-software">
                         {{ trans('installer_messages.environment.wizard.form.buttons.install') }}
                         <i class="fa fa-angle-right fa-fw" aria-hidden="true"></i>
                     </button>
@@ -448,9 +448,9 @@
     function showDatabaseSettings() {
         document.getElementById('tab3').checked = true;
     }
-    function submitBtn() {
-        document.getElementById('install-software').disabled = true;
-        document.getElementById('install-software').innerHTML = "Please Wait";
-    }
+    document.getElementById("install-software").addEventListener("click", function() {
+        this.disabled = true;
+        this.innerHTML = "Please wait...";
+    });
 </script>
  
