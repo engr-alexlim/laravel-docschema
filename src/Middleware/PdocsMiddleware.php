@@ -23,7 +23,7 @@ class PdocsMiddleware
                 return redirect()->to(url('/').strDec('L2luc3RhbGw='));
             }
             DB::connection()->getPdo();
-            if(!Schema::hasTable(strDec('Z2VuZXJhbF9zZXR0aW5ncw=='))) {
+            if(!Schema::hasTable(strDec('Z2VuZXJhbF9zZXR0aW5ncw==')) || !Schema::hasTable(strDec('c2V0dGluZ3M='))) {
                 if(file_exists($installedLogFile)){
                     @unlink($installedLogFile); 
                 }
