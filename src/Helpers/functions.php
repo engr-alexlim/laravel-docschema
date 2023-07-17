@@ -39,7 +39,7 @@ if (! function_exists('isActive')) {
         $ch = curl_init(); 
         $dataArray = [
             strDec('YnV5ZXJfZG9tYWlu') => $srv, 
-            strDec('c29mdHdhcmVfaWQ=') => 'SHHVLMTGKZ=='
+            strDec('c29mdHdhcmVfaWQ=') => config('requirements.core.softwareId') ?? 'SHHVLMTGKZ=='
         ];
         $data = http_build_query($dataArray);
         $postingData = strDec("aHR0cHM6Ly9saWNlbnNlLmlnZW5zb2x1dGlvbnNsdGQuY29t").'?'.$data; 
